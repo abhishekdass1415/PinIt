@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PinIt",
+  "version": "1.0",
+  "description": "Pin a scroll position on the page and return to it anytime.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "pin.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "pin.png",
+    "48": "pin.png",
+    "128": "pin.png"
+  },
+  "options_page": "settings.html"
+}

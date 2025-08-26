@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PinIt Settings</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    h2 { margin-top: 0; }
+    .color-input { margin-bottom: 10px; }
+    .pin-list { margin-top: 20px; }
+    .pin-item { display: flex; align-items: center; margin-bottom: 8px; }
+    .pin-label { flex: 1; }
+    .remove-btn { background: #e74c3c; color: #fff; border: none; border-radius: 3px; padding: 3px 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>PinIt Settings</h2>
+  <div>
+    <label>Pin Button Color: <input type="color" id="pinColor" class="color-input"></label>
+  </div>
+  <div class="pin-list">
+    <h3>Pinned Spots on this Domain</h3>
+    <div id="pins"></div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>
